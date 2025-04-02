@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - MovieMania</title>
+
+    <!-- Bootstrap CSS Link for Styling -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&family=Montserrat:wght@600&display=swap" rel="stylesheet"> <!-- Google Fonts -->
+    <link rel="stylesheet" href="style.css">  <!-- External CSS (Optional) -->
+
+    <style>
+        /* Custom Styles */
+        body {
+            font-family: 'Roboto', sans-serif;
+            background: #f8f9fa;
+        }
+
+        .navbar {
+            background: linear-gradient(90deg, rgba(201, 48, 44, 1) 0%, rgba(168, 13, 13, 1) 100%);
+        }
+
+        .navbar-brand {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 600;
+            font-size: 1.8rem;
+        }
+
+        h1 {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 700;
+            color: #333;
+        }
+
+        .btn-danger {
+            background-color: #c9302c;
+            border: none;
+            transition: background-color 0.3s ease;
+        }
+
+        .btn-danger:hover {
+            background-color: #a82927;
+        }
+
+        .form-control {
+            border-radius: 10px;
+            border: 1px solid #ddd;
+        }
+
+        .form-control:focus {
+            box-shadow: 0 0 0 0.25rem rgba(201, 48, 44, 0.25);
+            border-color: #c9302c;
+        }
+
+        .section-title {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 600;
+            color: #c9302c;
+            margin-bottom: 1.5rem;
+        }
+
+        .bg-light {
+            background-color: #f9f9f9;
+        }
+
+        .footer {
+            background: #212529;
+            color: white;
+            padding: 2rem 0;
+        }
+
+        .footer a {
+            color: #f8f9fa;
+            text-decoration: none;
+        }
+
+        .footer a:hover {
+            text-decoration: underline;
+        }
+
+        .map-iframe {
+            border-radius: 8px;
+            box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .contact-form-container {
+            box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.1);
+            background-color: #fff;
+            border-radius: 10px;
+            padding: 2rem;
+        }
+
+        .contact-info {
+            background: linear-gradient(135deg,#c9302c 0%, #ff4e50 100%);
+            padding: 1.5rem;
+            border-radius: 10px;
+            color: white;
+            box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .contact-info p {
+            margin: 0.5rem 0;
+        }
+
+        .contact-info h4 {
+            margin-bottom: 1rem;
+        }
+
+        @media (max-width: 768px) {
+            .contact-form-container {
+                margin-bottom: 2rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">MovieMania</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="netflix.html">Netflix Reviews</a></li>
+                    <li class="nav-item"><a class="nav-link" href="amazon-prime.html">Amazon Prime Reviews</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Contact Section -->
+    <section class="bg-light text-center py-5">
+        <div class="container">
+            <h1 class="display-4">Get in Touch</h1>
+            <p class="lead">Have a question or suggestion? We’d love to hear from you!</p>
+        </div>
+    </section>
+
+    <!-- Contact Form Section -->
+    <div class="container my-5">
+        <div class="row">
+            <!-- Contact Form -->
+            <div class="col-md-6">
+                <div class="contact-form-container">
+                    <h3 class="section-title">Reach Out to Us</h3>
+                    <form action="#" method="POST">
+                        <div class="mb-3">
+                            <label for="name" class="form-label">Full Name</label>
+                            <input type="text" class="form-control" id="name" name="name" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="email" class="form-label">Email Address</label>
+                            <input type="email" class="form-control" id="email" name="email" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="message" class="form-label">Your Message</label>
+                            <textarea class="form-control" id="message" name="message" rows="5" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-danger w-100">Send Message</button>
+                    </form>
+                </div>
+            </div>
+
+            <!-- Contact Info & Map -->
+            <div class="col-md-6">
+                <div class="contact-info">
+                    <h4>Our Location</h4>
+                    <p>MovieMania Headquarters</p>
+                    <p>123 Movie Street, Cinema City, FilmLand</p>
+                    <p>Email: contact@moviemania.com</p>
+                    <p>Phone: +1 (123) 456-7890</p>
+                </div>
+
+                <!-- Google Map Embed -->
+                <div class="mt-4">
+                    <iframe class="map-iframe" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3558.359530526057!2d-82.34500658435794!3d29.651634781955507!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88c38b5da0b2cd7f%3A0x599c865c586f8c0f!2sThe+University+of+Florida!5e0!3m2!1sen!2sus!4v1631227994072!5m2!1sen!2sus" width="100%" height="250" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer Section -->
+    <footer class="footer text-center">
+        <p>&copy; 2025 MovieMania | All Rights Reserved</p>
+        <p>Follow us on: 
+            <a href="#">Facebook</a> | 
+            <a href="#">Instagram</a>
+        </p>
+    </footer>
+
+    <!-- Bootstrap JavaScript Link -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

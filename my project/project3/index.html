@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MovieMania - OTT Movie Reviews</title>
+
+    <!-- Bootstrap CSS Link for Styling -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&family=Montserrat:wght@600&display=swap" rel="stylesheet"> <!-- Google Fonts -->
+    <link rel="stylesheet" href="style.css"> <!-- External CSS (Optional) -->
+
+    <style>
+        /* Custom Styles */
+        body {
+            font-family: 'Roboto', sans-serif;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav {
+            background-color: #c9302c;
+        }
+
+        .navbar-nav .nav-link {
+            color: white !important;
+        }
+
+        .navbar-nav .nav-link:hover {
+            color: #ffd700 !important;
+        }
+
+        .navbar-toggler-icon {
+            background-color: white;
+        }
+
+        /* Hero Section */
+        .hero-section {
+            background-image: url('banner.jpeg');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            text-align: center;
+            padding: 100px 0;
+            background-attachment: fixed;
+        }
+
+        .hero-section h1 {
+            font-size: 3rem;
+            font-weight: bold;
+        }
+
+        .hero-section p {
+            font-size: 1.5rem;
+        }
+
+        .btn-light:hover {
+            background-color: #ff5733;
+            color: white;
+        }
+
+        .highlight {
+            color: #ffd700;
+            font-weight: bold;
+        }
+
+        /* Latest Reviews Section */
+        .latest-reviews {
+            background-color: #f1f1f1;
+            padding: 60px 0;
+            text-align: center;
+        }
+
+        .latest-reviews h2 {
+            font-size: 2.5rem;
+            color: #333;
+        }
+
+        /* Card Section */
+        .movie-card img {
+            transition: transform 0.3s ease;
+        }
+
+        .movie-card img:hover {
+            transform: scale(1.05);
+        }
+
+        .card-title {
+            font-size: 1.25rem;
+            font-weight: bold;
+        }
+
+        .card-body {
+            padding: 20px;
+        }
+
+        .footer {
+            background-color: #333;
+            color: white;
+            padding: 40px 0;
+            text-align: center;
+        }
+
+        .footer a {
+            color: #ffd700;
+            text-decoration: none;
+        }
+
+        .footer a:hover {
+            color: white;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .hero-section h1 {
+                font-size: 2.5rem;
+            }
+
+            .hero-section p {
+                font-size: 1.2rem;
+            }
+        }
+    </style>
+
+    <script>
+        // Smooth scroll to reviews section when clicking the "Explore Reviews" button
+        function scrollToReviews() {
+            document.getElementById("reviews").scrollIntoView({
+                behavior: "smooth"
+            });
+        }
+    </script>
+</head>
+
+<body>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">MovieMania</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="netflix.html">Netflix Reviews</a></li>
+                    <li class="nav-item"><a class="nav-link" href="amazon-prime.html">Amazon Prime Reviews</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="container">
+            <h1>Welcome to MovieMania</h1>
+            <p>Your Ultimate Destination for Netflix, Amazon Prime, and OTT Movie Reviews.</p>
+            <a href="javascript:void(0);" class="btn btn-light btn-lg" onclick="scrollToReviews()">Explore Reviews</a>
+        </div>
+    </section>
+
+    <!-- Latest Reviews Section -->
+    <section class="latest-reviews" id="reviews">
+        <div class="container">
+            <h2>Latest Reviews</h2>
+            <p>Stay in the loop with the hottest and most talked-about movies and TV shows! Discover the latest reviews and find out what's trending across all major OTT platforms.</p>
+        </div>
+    </section>
+
+    <!-- Movie Review Cards -->
+    <div class="container my-5">
+        <div class="row">
+            <!-- Movie Card 1 -->
+            <div class="col-md-4 mb-4">
+                <div class="card h-100 shadow-lg rounded movie-card">
+                    <img src="p17580186_b_h8_ak.jpg" class="card-img-top" alt="The Witcher">
+                    <div class="card-body">
+                        <h5 class="card-title">The Witcher</h5>
+                        <p class="card-text">Netflix | Action, Fantasy | Rating: 8.2/10</p>
+                        <a href="#" class="btn btn-danger w-100" data-bs-toggle="modal" data-bs-target="#reviewModal1">Read Review</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Movie Card 2 -->
+            <div class="col-md-4 mb-4">
+                <div class="card h-100 shadow-lg rounded movie-card">
+                    <img src="b.jpg" class="card-img-top" alt="The Boys">
+                    <div class="card-body">
+                        <h5 class="card-title">The Boys</h5>
+                        <p class="card-text">Amazon Prime | Superhero, Dark Comedy | Rating: 9.0/10</p>
+                        <a href="#" class="btn btn-danger w-100" data-bs-toggle="modal" data-bs-target="#reviewModal2">Read Review</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Movie Card 3 -->
+            <div class="col-md-4 mb-4">
+                <div class="card h-100 shadow-lg rounded movie-card">
+                    <img src="s.webp" class="card-img-top" alt="Stranger Things">
+                    <div class="card-body">
+                        <h5 class="card-title">Stranger Things</h5>
+                        <p class="card-text">Netflix | Horror, Thriller | Rating: 8.9/10</p>
+                        <a href="#" class="btn btn-danger w-100" data-bs-toggle="modal" data-bs-target="#reviewModal3">Read Review</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal for Review 1 -->
+    <div class="modal fade" id="reviewModal1" tabindex="-1" aria-labelledby="reviewModalLabel1" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="reviewModalLabel1">The Witcher - Full Review</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p>The Witcher follows Geralt of Rivia, a monster hunter, navigating a medieval fantasy world filled with danger and intrigue. With captivating characters, stunning visuals, and intricate storytelling, this series offers an exciting escape into a rich, dark world. The 8.2/10 rating reflects its popularity among fantasy fans.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal for Review 2 -->
+    <div class="modal fade" id="reviewModal2" tabindex="-1" aria-labelledby="reviewModalLabel2" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="reviewModalLabel2">The Boys - Full Review</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p>The Boys is a dark, satirical superhero series. Set in a world where superheroes abuse their powers, this show offers a twisted look at heroism, corruption, and justice. The show's humor and action make it a compelling watch. The 9.0/10 rating is a testament to its success.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal for Review 3 -->
+    <div class="modal fade" id="reviewModal3" tabindex="-1" aria-labelledby="reviewModalLabel3" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="reviewModalLabel3">Stranger Things - Full Review</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p>Stranger Things is a supernatural horror series set in the 1980s, following a group of kids who encounter strange occurrences in their small town. With elements of suspense, mystery, and friendship, it captivates viewers and brings nostalgia to fans of 80s culture. The 8.9/10 rating reflects its massive success and fan following.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JavaScript Link -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>

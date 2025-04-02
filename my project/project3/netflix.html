@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Netflix Reviews - MovieMania</title>
+
+    <!-- Bootstrap CSS Link for Styling -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&family=Montserrat:wght@600&display=swap" rel="stylesheet"> <!-- Google Fonts -->
+    <link rel="stylesheet" href="style.css">  <!-- External CSS (Optional) -->
+</head>
+
+<body>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #c9302c;">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">MovieMania</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="netflix.html">Netflix Reviews</a></li>
+                    <li class="nav-item"><a class="nav-link" href="amazon-prime.html">Amazon Prime Reviews</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Banner Section for Netflix Reviews -->
+    <section class="bg-dark text-white text-center py-5" style="background-image: url('hq720.jpg'); background-size: cover; background-position: center;">
+        <div class="container">
+            <h1 class="display-4 animate__animated animate__fadeIn">Netflix Reviews</h1>
+            <p class="lead animate__animated animate__fadeIn animate__delay-1s">Explore our in-depth reviews of the latest Netflix movies and series. Find your next binge-worthy show!</p>
+        </div>
+    </section>
+
+    <!-- Review Cards for Netflix Movies -->
+    <div class="container my-5">
+        <div class="row">
+            <!-- Movie Card 1 -->
+            <div class="col-md-4 mb-4">
+                <div class="card h-100 shadow-lg rounded">
+                    <img src="p17580186_b_h8_ak.jpg" class="card-img-top" alt="The Witcher">
+                    <div class="card-body">
+                        <h5 class="card-title">The Witcher</h5>
+                        <p class="card-text">Genre: Action, Fantasy | Rating: 8.2/10</p>
+                        <p class="card-text">Follow Geralt of Rivia in his battle against evil forces in a fantastical medieval world. A thrilling Netflix series for fans of fantasy.</p>
+                        <!-- Modal Trigger Button -->
+                        <button class="btn btn-danger w-100" data-bs-toggle="modal" data-bs-target="#witcherReviewModal">Read Full Review</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Modal for The Witcher Review -->
+            <div class="modal fade" id="witcherReviewModal" tabindex="-1" aria-labelledby="witcherReviewModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="witcherReviewModalLabel">The Witcher Review</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <p>The Witcher follows Geralt of Rivia, a monster hunter, navigating a medieval fantasy world filled with danger and intrigue. With captivating characters, stunning visuals, and intricate storytelling, this series offers an exciting escape into a rich, dark world. The 8.2/10 rating reflects its popularity among fantasy fans.</p>
+                            <p>Full review details go here. Expand upon the plot, characters, and performances in more depth.</p>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Movie Card 2 -->
+            <div class="col-md-4 mb-4">
+                <div class="card h-100 shadow-lg rounded">
+                    <img src="s.webp" class="card-img-top" alt="Stranger Things">
+                    <div class="card-body">
+                        <h5 class="card-title">Stranger Things</h5>
+                        <p class="card-text">Genre: Horror, Thriller | Rating: 8.9/10</p>
+                        <p class="card-text">A gripping thriller about a group of friends who encounter strange supernatural occurrences in their small town. Perfect for horror fans!</p>
+                        <button class="btn btn-danger w-100" data-bs-toggle="modal" data-bs-target="#strangerThingsModal">Read Full Review</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Modal for Stranger Things Review -->
+            <div class="modal fade" id="strangerThingsModal" tabindex="-1" aria-labelledby="strangerThingsModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="strangerThingsModalLabel">Stranger Things Review</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <p>Stranger Things is a thrilling supernatural horror series set in the 1980s. It follows a group of kids who face off against otherworldly creatures and dark forces while uncovering the mystery of a missing child. The series has been lauded for its nostalgic charm, compelling characters, and intense suspense.</p>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Movie Card 2 -->
+            <div class="col-md-4 mb-4">
+                <div class="card h-100 shadow-lg rounded">
+                    <img src="hop.jpg" class="card-img-top" alt="Stranger Things">
+                    <div class="card-body">
+                        <h5 class="card-title">The hunting of hell house</h5>
+                        <p class="card-text">Genre: Horror, Thriller | Rating: 8.9/10</p>
+                        <p class="card-text">A gripping thriller about a group of friends who encounter strange supernatural occurrences in their small town. Perfect for horror fans!</p>
+                        <button class="btn btn-danger w-100" data-bs-toggle="modal" data-bs-target="#strangerThingsModal">Read Full Review</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Modal for Stranger Things Review -->
+            <div class="modal fade" id="strangerThingsModal" tabindex="-1" aria-labelledby="strangerThingsModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="strangerThingsModalLabel">Stranger Things Review</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <p>Stranger Things is a thrilling supernatural horror series set in the 1980s. It follows a group of kids who face off against otherworldly creatures and dark forces while uncovering the mystery of a missing child. The series has been lauded for its nostalgic charm, compelling characters, and intense suspense.</p>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- More Movie Cards with modals (same pattern as above) -->
+            <!-- You can replicate the same structure for other movies -->
+
+        </div>
+    </div>
+
+    <!-- Footer Section -->
+    <footer class="bg-dark text-white text-center py-4">
+        <p>&copy; 2025 MovieMania | All Rights Reserved</p>
+        <p>Follow us on: 
+            <a href="#" class="text-white mx-2">Facebook</a> | 
+            <a href="#" class="text-white mx-2">Instagram</a>
+        </p>
+    </footer>
+
+    <!-- Bootstrap JavaScript Link -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>

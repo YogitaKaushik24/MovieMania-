@@ -1,0 +1,71 @@
+/* Body Styling */
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f8f9fa;
+}
+
+/* Header Styling */
+nav.navbar {
+    background-color: #c9302c; /* Dark Red for Header */
+}
+
+.navbar-brand {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    color: #fff !important;
+}
+
+.navbar-nav .nav-link {
+    color: #fff !important;
+    font-weight: 500;
+}
+
+.navbar-nav .nav-link:hover {
+    color: #f8f9fa !important;
+}
+
+/* Button Hover Effect */
+.btn-danger:hover {
+    background-color: #b02a2a;  /* Slightly darker red for hover */
+    color: #fff;  /* White text on hover */
+    transform: scale(1.05);  /* Slight zoom effect */
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+/* Card Styling */
+.card {
+    border-radius: 15px;  /* Smooth rounded corners */
+    overflow: hidden;  /* Ensure image fits nicely */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);  /* Light shadow for depth */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Card Hover Effect */
+.card:hover {
+    transform: translateY(-5px);  /* Slight lift effect */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);  /* Stronger shadow */
+}
+
+/* Footer Styling */
+footer {
+    background-color: #343a40;  /* Dark footer */
+}
+
+footer a {
+    color: #fff !important;
+}
+
+footer a:hover {
+    color: #c9302c !important;  /* Red color on hover */
+}
+
+/* About Section */
+section.py-5.text-center {
+    background-color: #f8f9fa;  /* Light Gray */
+    border-radius: 10px;  /* Smooth corners for a modern look */
+}
+
+/* Latest Reviews Section */
+section.py-5.text-center:last-of-type {
+    background-color: #f0f0f0;  /* Slightly lighter background */
+}
